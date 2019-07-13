@@ -2,8 +2,10 @@ import React, { FC, useState, useEffect, useRef, ChangeEvent, KeyboardEvent } fr
 import { connect } from 'react-redux'
 import { faListAlt, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
+import { setImages, getImages } from '@/app/helpers/simpleIDB'
 import { logout, LoginDispatcher } from '@/app/actions/login'
 import { addTodo, updateTodo, deleteTodo, fetchTodos, TodoDispatcher } from '@/app/actions/todo'
+
 import { Header } from '@/app/components/Header'
 import { TodoItem } from '@/app/components/TodoItem'
 import { ListWrapper } from '@/app/components/ListWrapper'
@@ -14,6 +16,8 @@ import { RootState } from '@/app/models'
 import { Todo } from '@/app/models/Todo'
 import words from '@/assets/strings'
 import style from '@/app/containers/TodoApp/style.scss'
+
+import base64Image from '@/assets/images/base64Image'
 
 interface StateProps {
   readonly todos: Todo[]
@@ -77,6 +81,9 @@ const TodoApp: FC<TodoAppProps> = (props: TodoAppProps) => {
   const handleCheckBoxClick = (todo: Todo) => props.updateTodo({ ...todo, done: !todo.done })
   const handleDeleteClick = (todo: Todo) => props.deleteTodo(todo.id)
 
+  const handleSetDataToDB = () => setImages([base64Image, 'test_01', 'test_04', 'test_02', 'test_03'])
+  const handleGetDataFromDB = () => getImages().then(images => console.log(images[0]))
+
   const modalOpen = () => {
     setText('')
     setModalHidden(false)
@@ -129,6 +136,13 @@ const TodoApp: FC<TodoAppProps> = (props: TodoAppProps) => {
           <TodoItem key={todo.id} todo={todo} handleCheckBoxClick={handleCheckBoxClick} handleDeleteClick={handleDeleteClick} />
         ))}
       </ListWrapper>
+
+      <button type="button" onClick={handleSetDataToDB}>
+        Set Data to DB
+      </button>
+      <button type="button" onClick={handleGetDataFromDB}>
+        Get Data from DB
+      </button>
       <Footer />
     </div>
   )
