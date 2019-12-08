@@ -72,11 +72,6 @@ rules:
   no-shadow: 'off'
   require-yield: error
 
-  ## Storybook prefers importing with absolute paths
-  no-restricted-imports:
-    - error
-    - patterns: [../*, ./*]
-
   # @typescript-eslint
   '@typescript-eslint/explicit-function-return-type': off
   '@typescript-eslint/explicit-member-accessibility': off

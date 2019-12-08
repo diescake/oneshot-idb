@@ -1,18 +1,10 @@
 # oneshot-idb
 
-[![CircleCI](https://circleci.com/gh/diescake/igata.svg?style=svg)](https://circleci.com/gh/diescake/igata)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&identifier=165770216)](https://dependabot.com)
+A wrapper library to easy to handle indexedDB for saving one shot data.
 
 ## How to use
 
-T.B.D.
-
-## How to build and launch server
-
-```sh
-$ yarn # npm install
-$ yarn start # npm start
-```
+t.b.d.
 
 ## Requirements
 
