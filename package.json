@@ -1,9 +1,9 @@
 {
-  "name": "igata",
-  "version": "0.1.0",
+  "name": "oneshot-idb",
+  "version": "1.0.0",
   "private": false,
-  "description": "igata is my boilerplate for Web Frontend",
-  "repository": "git@github.com:diescake/igata.git",
+  "description": "A wrapper library to easy to handle indexedDB for saving one shot data.",
+  "repository": "git@github.com:diescake/oneshot-idb.git",
   "author": "diescake",
   "license": "MIT",
   "scripts": {
@@ -14,10 +14,8 @@
     "style": "stylelint --fix './src/**/*.scss'",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "deploy": "echo 'Not necessary for Netlify'",
-    "license": "license-checker --production --summary",
-    "storybook": "start-storybook -c ./src/test/storybook/config -p 6006",
-    "storybook:build": "build-storybook -c ./src/test/storybook/config"
+    "deploy": "echo 'Not necessary",
+    "license": "license-checker --production --summary"
   },
   "husky": {
     "hooks": {
@@ -28,7 +26,6 @@
     "*.{js,jsx,ts,tsx}": [
       "yarn lint",
       "yarn test --findRelatedTests",
-      "yarn storybook:build",
       "git add"
     ],
     "*.{sass,scss}": [
@@ -43,14 +40,6 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "@storybook/addon-a11y": "^5.2.8",
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-info": "^5.2.8",
-    "@storybook/addon-knobs": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/cli": "^5.2.8",
-    "@storybook/react": "^5.2.8",
     "@types/history": "^4.7.3",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.12",
