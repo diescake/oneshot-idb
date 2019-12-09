@@ -14,7 +14,7 @@ t.b.d.
 
 ## License
 
-[MIT License](https://github.com/diescake/igata/blob/master/LICENSE)
+[MIT License](https://github.com/diescake/oneshot-idb/blob/master/LICENSE)
 
 ## Author
 
